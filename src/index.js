@@ -13,6 +13,10 @@ app.use(express.json());
 let todos = [];
 
 // Routes
+app.get('/', (req, res) => {
+  res.send('we are up!!');
+});
+
 app.get('/todos', (req, res) => {
   res.json(todos);
 });
